@@ -1,0 +1,12 @@
+ [Unit]
+ Description=Kit Project
+ After=multi-user.target
+
+ [Service]
+ User=pi
+ Type=simple
+ Environment=DISPLAY=:0
+ ExecStart=/usr/bin/python3 /home/pi/aikit/menu.py -f
+
+ [Install]
+ WantedBy=multi-user.target
